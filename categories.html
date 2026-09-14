@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Privacy · Yonder Garden Works</title>
+  <meta name="description" content="Terms of Privacy for Yonder Garden Works — how we handle your data, our editorial independence, and the terms of using our field guides.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Terms of Privacy · Yonder Garden Works">
+  <meta property="og:description" content="Transparent terms for a reader-supported garden journal. No ads, no data selling — just clear guidelines.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=630&fit=crop">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ---------- RESET & GLOBAL ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: #f6f3ee;
+      color: #2b2a26;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* ---------- TYPOGRAPHY SYSTEM ---------- */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #1e2a1e;
+    }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 400; line-height: 1.05; }
+    h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 400; margin-top: 2.5rem; margin-bottom: 1rem; }
+    h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); font-weight: 500; margin-top: 2rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.15rem; font-weight: 500; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+
+    .body-text {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: #3a3a35;
+    }
+
+    .caption, .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #6b6b60;
+    }
+
+    .small {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --bg-paper: #f6f3ee;
+      --bg-soft: #ede8e0;
+      --surface: #ffffff;
+      --surface-muted: #f0ede7;
+      --text-primary: #1e2a1e;
+      --text-secondary: #3a3a35;
+      --text-muted: #6b6b60;
+      --border-light: #dad6cd;
+      --border-medium: #c4bfb5;
+      --accent-moss: #5c6e4f;
+      --accent-clay: #b86b4b;
+      --accent-sage: #8a9a7e;
+      --accent-fern: #3f5a3f;
+      --accent-gold: #c9a56b;
+    }
+
+    /* ---------- LAYOUT CONTAINERS ---------- */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .container-narrow {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- NAVIGATION (consistent with about page) ---------- */
+    .site-nav {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border-light);
+      background: rgba(246, 243, 238, 0.92);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-fern);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo-mark::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .logo-text span:last-child {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--accent-fern);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-fern);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .search-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0.4rem;
+      border-radius: 50%;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      background: var(--surface-muted);
+    }
+
+    .subscribe-btn {
+      background: var(--accent-fern);
+      color: #f6f3ee;
+      border: none;
+      padding: 0.55rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .subscribe-btn:hover {
+      background: #2f452f;
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* ---------- PAGE HEADER ---------- */
+    .page-header {
+      padding: 3rem 0 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .page-header h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .page-header .subhead {
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: #3f4a3a;
+      max-width: 700px;
+      border-left: 3px solid var(--accent-sage);
+      padding-left: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 0.75rem 0 0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--accent-fern);
+    }
+
+    /* ---------- LEGAL CONTENT ---------- */
+    .legal-content {
+      padding: 2.5rem 0 1rem;
+    }
+
+    .legal-content .lead {
+      font-size: 1.15rem;
+      font-family: 'Fraunces', serif;
+      color: #1e2a1e;
+      line-height: 1.6;
+      border-left: 3px solid var(--accent-clay);
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .legal-content p {
+      margin-bottom: 1.25rem;
+      color: #3a3a35;
+      line-height: 1.8;
+    }
+
+    .legal-content ul, .legal-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      color: #3a3a35;
+      line-height: 1.8;
+    }
+
+    .legal-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .legal-content strong {
+      color: #1e2a1e;
+      font-weight: 600;
+    }
+
+    .legal-content a {
+      color: var(--accent-fern);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      transition: color 0.2s;
+    }
+
+    .legal-content a:hover {
+      color: var(--accent-clay);
+    }
+
+    .legal-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .legal-meta span i {
+      margin-right: 0.4rem;
+      color: var(--accent-sage);
+    }
+
+    .highlight-box {
+      background: var(--surface-muted);
+      border-left: 4px solid var(--accent-sage);
+      padding: 1.5rem 2rem;
+      border-radius: 0 16px 16px 0;
+      margin: 2rem 0;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-footer-note {
+      background: #f0ede7;
+      border-radius: 24px;
+      padding: 2rem 2.5rem;
+      margin: 3rem 0 1rem;
+      border: 1px solid var(--border-light);
+    }
+
+    .legal-footer-note p {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-footer-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ---------- QUOTE BLOCK (reused) ---------- */
+    .quote-block {
+      background: #f0ede7;
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      margin: 3rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid var(--border-light);
+    }
+
+    .quote-block i {
+      font-size: 2rem;
+      color: var(--accent-gold);
+      margin-bottom: 1rem;
+      opacity: 0.6;
+    }
+
+    .quote-block blockquote {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+      font-weight: 400;
+      line-height: 1.4;
+      color: #1e2a1e;
+      max-width: 700px;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .quote-block cite {
+      font-style: normal;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      background: #1e2a1e;
+      color: #d9d6cf;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+      border-top: 4px solid var(--accent-gold);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo-text span:first-child {
+      color: #f6f3ee;
+    }
+
+    .footer-brand .logo-text span:last-child {
+      color: #a8a89e;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #b6b6ae;
+      margin: 1.5rem 0;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      color: #e3e0d8;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-col a {
+      color: #b6b6ae;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #f6f3ee;
+    }
+
+    .footer-newsletter p {
+      font-size: 0.9rem;
+      color: #b6b6ae;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      border: 1px solid #3f4a3a;
+      border-radius: 40px;
+      overflow: hidden;
+      background: #2b3a2b;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      color: #f6f3ee;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #8a8a80;
+    }
+
+    .newsletter-form button {
+      background: var(--accent-gold);
+      border: none;
+      padding: 0 1.5rem;
+      color: #1e2a1e;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .newsletter-form button:hover {
+      background: #b8924a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2f3a2f;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8a80;
+    }
+
+    .footer-bottom a {
+      color: #a8a89e;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      color: #f6f3ee;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      color: #a8a89e;
+      font-size: 1.1rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-actions .subscribe-btn {
+        display: none;
+      }
+      .page-header h1 {
+        font-size: 2rem;
+      }
+      .page-header .subhead {
+        font-size: 1rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .legal-footer-note {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 1rem;
+      }
+      .container-narrow {
+        padding: 0 1rem;
+      }
+      .logo-text span:first-child {
+        font-size: 1.1rem;
+      }
+      .logo-mark {
+        width: 28px;
+        height: 28px;
+      }
+      .quote-block {
+        padding: 2rem 1.25rem;
+      }
+      .highlight-box {
+        padding: 1.25rem 1.5rem;
+      }
+    }
+
+    /* ---------- REVEAL ANIMATION ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent-clay);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="Yonder Garden Works home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">
+          <span>Yonder</span>
+          <span>Garden Works</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html" aria-current="page" style="color: var(--accent-fern);">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="search-toggle" aria-label="Search the garden"><i class="fas fa-search"></i></button>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+        <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <section class="page-header container-narrow">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <span>·</span> <span>Terms of Privacy</span>
+    </div>
+    <h1>Terms of Privacy</h1>
+    <p class="subhead">
+      Clear, plain-language terms for using Yonder Garden Works. 
+      We keep it simple: no ads, no data selling, and no nonsense.
+    </p>
+  </section>
+
+  <!-- ========== LEGAL CONTENT ========== -->
+  <section class="container-narrow legal-content reveal">
+    <div class="legal-meta">
+      <span><i class="fas fa-calendar-alt"></i> Last updated: April 2025</span>
+      <span><i class="fas fa-file-contract"></i> Version 1.2</span>
+      <span><i class="fas fa-leaf"></i> Applies to all visitors</span>
+    </div>
+
+    <p class="lead">
+      By using Yonder Garden Works, you agree to the terms below. We've written them 
+      to be readable — not to hide behind legalese. If you have questions, 
+      <a href="contact.html">reach out</a>.
+    </p>
+
+    <!-- 1. WHO WE ARE -->
+    <h2>1. Who we are</h2>
+    <p>
+      Yonder Garden Works ("we", "us", "our") is an independent, reader-supported 
+      journal for gardeners. Our website is <strong>yondergardenworks.com</strong> 
+      (the "Site"). We are not a corporation; we're a small editorial team 
+      publishing field-tested knowledge.
+    </p>
+    <p>
+      These Terms of Privacy cover your use of the Site, our newsletter, and any 
+      content we publish. They do not cover third-party sites we may link to — 
+      please check their terms separately.
+    </p>
+
+    <!-- 2. YOUR PRIVACY, PLAINLY -->
+    <h2>2. Your privacy, plainly</h2>
+    <p>
+      We collect as little as possible. When you visit the Site, our server may log 
+      standard technical information (IP address, browser type, pages visited) for 
+      security and basic analytics. We do not sell, rent, or trade your personal 
+      information to anyone. Ever.
+    </p>
+    <div class="highlight-box">
+      <p><strong>What we collect:</strong></p>
+      <ul>
+        <li><strong>Email address</strong> — only if you subscribe to our newsletter.</li>
+        <li><strong>Usage data</strong> — anonymous, aggregated page views to help us improve.</li>
+        <li><strong>Comments or messages</strong> — if you contact us directly.</li>
+      </ul>
+      <p><strong>What we never do:</strong> sell your data, run targeted ads, or share your email with third parties.</p>
+    </div>
+    <p>
+      For full details, see our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+
+    <!-- 3. NEWSLETTER & COMMUNICATIONS -->
+    <h2>3. Newsletter &amp; communications</h2>
+    <p>
+      If you subscribe to our field notes, we'll send you occasional emails with 
+      new guides, seasonal reminders, and editorial updates. You can unsubscribe 
+      at any time using the link at the bottom of every email.
+    </p>
+    <p>
+      We use a third-party email service to manage our list. That provider stores 
+      your email address on our behalf and is bound by strict data protection 
+      agreements. We never give them permission to contact you independently.
+    </p>
+
+    <!-- 4. COOKIES & TRACKING -->
+    <h2>4. Cookies &amp; tracking</h2>
+    <p>
+      We use a minimal set of cookies to remember your preferences and to understand 
+      which articles are most useful. We do <strong>not</strong> use advertising 
+      cookies, cross-site trackers, or invasive analytics.
+    </p>
+    <p>
+      You can disable cookies in your browser settings at any time. Our 
+      <a href="cookies.html">Cookies Policy</a> explains exactly what we use.
+    </p>
+
+    <!-- 5. EDITORIAL INDEPENDENCE -->
+    <h2>5. Editorial independence</h2>
+    <p>
+      Every guide, article, and field note on Yonder Garden Works is written by 
+      our team or invited contributors who actually garden. We do not accept 
+      sponsored content, paid product placements, or affiliate links that 
+      compromise our recommendations.
+    </p>
+    <p>
+      If we mention a tool, seed variety, or technique, it's because we've tested 
+      it or believe it's genuinely useful — not because someone paid us. 
+      Our only loyalty is to our readers and the soil.
+    </p>
+
+    <!-- 6. INTELLECTUAL PROPERTY -->
+    <h2>6. Intellectual property</h2>
+    <p>
+      All content on this Site — text, images, illustrations, and designs — is 
+      owned by Yonder Garden Works or used with permission. You're welcome to 
+      share short excerpts with a link back to the original article. 
+      Republishing full articles without permission is not allowed.
+    </p>
+    <p>
+      If you'd like to repost or use our content, <a href="contact.html">ask us first</a>. 
+      We're usually happy to say yes.
+    </p>
+
+    <!-- 7. USER RESPONSIBILITIES -->
+    <h2>7. User responsibilities</h2>
+    <p>
+      When using our Site or commenting on our articles, you agree not to:
+    </p>
+    <ul>
+      <li>Post harmful, misleading, or spammy content.</li>
+      <li>Attempt to disrupt or hack the Site.</li>
+      <li>Use our content to train AI models without explicit permission.</li>
+      <li>Impersonate Yonder Garden Works or its team members.</li>
+    </ul>
+    <p>
+      We reserve the right to remove comments or block users who violate these 
+      basic principles.
+    </p>
+
+    <!-- 8. DISCLAIMER & LIMITATION -->
+    <h2>8. Disclaimer &amp; limitation</h2>
+    <p>
+      Gardening involves living systems — and living systems are unpredictable. 
+      While we share our best knowledge, we cannot guarantee specific results. 
+      What works in our climate may not work in yours. Use your own judgment 
+      and observe your local conditions.
+    </p>
+    <p>
+      Yonder Garden Works is provided "as is." We are not liable for any 
+      losses, damages, or disappointments arising from your use of the Site 
+      or our advice. Always garden safely and within local regulations.
+    </p>
+    <p>
+      For more, see our full <a href="disclaimer.html">Disclaimer</a>.
+    </p>
+
+    <!-- 9. CHANGES TO THESE TERMS -->
+    <h2>9. Changes to these terms</h2>
+    <p>
+      We may update these Terms of Privacy occasionally to reflect changes in 
+      our practices or legal requirements. When we do, we'll revise the 
+      "Last updated" date at the top. Significant changes will be announced 
+      in our newsletter.
+    </p>
+    <p>
+      By continuing to use the Site after changes, you accept the updated terms.
+    </p>
+
+    <!-- 10. CONTACT -->
+    <h2>10. Contact us</h2>
+    <p>
+      If you have questions about these terms, your data, or anything else, 
+      please <a href="contact.html">get in touch</a>. We're a small team, 
+      but we read every message.
+    </p>
+
+    <!-- QUOTE -->
+    <div class="quote-block" style="margin-top: 3rem;">
+      <i class="fas fa-quote-left"></i>
+      <blockquote>
+        “Good terms should be like good gardening — transparent, respectful, and built to last.”
+      </blockquote>
+      <cite>— Yonder Garden Works</cite>
+    </div>
+
+    <!-- FOOTER NOTE -->
+    <div class="legal-footer-note">
+      <p><strong>Summary:</strong> We respect your privacy, we don't sell your data, 
+        we publish independent content, and we expect the same respect in return.</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">
+        For the full details, also see our <a href="privacy.html">Privacy Policy</a>, 
+        <a href="cookies.html">Cookies Policy</a>, and <a href="disclaimer.html">Disclaimer</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: #f6f3ee;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            <span class="logo-text">
+              <span>Yonder</span>
+              <span style="color: #a8a89e;">Garden Works</span>
+            </span>
+          </a>
+          <p>A reader-supported journal for gardeners who want to grow with intention. 
+            No ads, no fluff — just deep knowledge rooted in observation.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="#">Soil &amp; Compost</a></li>
+            <li><a href="#">Seed Starting</a></li>
+            <li><a href="#">Perennials</a></li>
+            <li><a href="#">Water Wisdom</a></li>
+            <li><a href="#">Pest Balance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Publication</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Archive</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Field notes</h4>
+          <p>Monthly-ish letters with practical tips and seasonal reminders.</p>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Your email" aria-label="Email address" required>
+            <button type="submit">Join</button>
+          </form>
+          <p style="font-size: 0.7rem; margin-top: 0.75rem; color: #7a7a70;">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Yonder Garden Works. All rights reserved. Built with care.</div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Intersection Observer for reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // mobile menu placeholder (same as about page)
+    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+      alert('Mobile navigation panel would open here — designed with a slide-in field index. (Demo)');
+    });
+
+    // search toggle demo
+    document.querySelector('.search-toggle')?.addEventListener('click', () => {
+      alert('Search overlay — type to explore 47+ guides. (Demo)');
+    });
+  </script>
+</body>
+</html>

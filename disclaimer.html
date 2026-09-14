@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer — Yonder Garden Works</title>
+  <meta name="description" content="Disclaimer for Yonder Garden Works — gardening advice is shared in good faith, but always observe and adapt to your own garden conditions.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Disclaimer — Yonder Garden Works">
+  <meta property="og:description" content="Gardening guidance shared with care, but always trust your own soil, climate, and experience first.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=630&fit=crop">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ---------- RESET & GLOBAL ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: #f6f3ee;
+      color: #2b2a26;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      font-weight: 400;
+      overflow-x: hidden;
+    }
+
+    /* ---------- TYPOGRAPHY SYSTEM ---------- */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #1e2a1e;
+    }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4.75rem); font-weight: 400; line-height: 1.05; }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 400; }
+    h3 { font-size: clamp(1.35rem, 2vw, 1.75rem); font-weight: 500; }
+
+    .body-text {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: #3a3a35;
+    }
+
+    .caption, .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #6b6b60;
+    }
+
+    .small { font-size: 0.875rem; line-height: 1.5; }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --bg-paper: #f6f3ee;
+      --bg-soft: #ede8e0;
+      --surface: #ffffff;
+      --surface-muted: #f0ede7;
+      --text-primary: #1e2a1e;
+      --text-secondary: #3a3a35;
+      --text-muted: #6b6b60;
+      --border-light: #dad6cd;
+      --border-medium: #c4bfb5;
+      --accent-moss: #5c6e4f;
+      --accent-clay: #b86b4b;
+      --accent-sage: #8a9a7e;
+      --accent-fern: #3f5a3f;
+      --accent-gold: #c9a56b;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .container-narrow {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+    .site-nav {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border-light);
+      background: rgba(246, 243, 238, 0.92);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-fern);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo-mark::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .logo-text span:last-child {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--accent-fern);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-fern);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .search-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0.4rem;
+      border-radius: 50%;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      background: var(--surface-muted);
+    }
+
+    .subscribe-btn {
+      background: var(--accent-fern);
+      color: #f6f3ee;
+      border: none;
+      padding: 0.55rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .subscribe-btn:hover {
+      background: #2f452f;
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* ---------- PAGE HEADER (disclaimer specific) ---------- */
+    .page-header {
+      padding: 3.5rem 0 2rem;
+      border-bottom: 1px solid var(--border-light);
+      background: linear-gradient(to bottom, #f6f3ee 0%, #f2efe8 100%);
+    }
+
+    .page-header h1 {
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      line-height: 1.02;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent-clay);
+    }
+
+    .page-header .subhead {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #3f4a3a;
+      max-width: 680px;
+      font-weight: 300;
+      border-left: 3px solid var(--accent-sage);
+      padding-left: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    /* ---------- DISCLAIMER CONTENT ---------- */
+    .disclaimer-section {
+      padding: 3.5rem 0 4rem;
+    }
+
+    .disclaimer-content {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: 0 60px 0 60px;
+      padding: 3rem 3.5rem;
+      box-shadow: 0 15px 30px -12px rgba(30, 42, 30, 0.06);
+    }
+
+    .disclaimer-content h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-sage);
+      display: inline-block;
+    }
+
+    .disclaimer-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .disclaimer-content h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin: 2rem 0 0.75rem;
+      color: #2b3a2b;
+    }
+
+    .disclaimer-content p {
+      margin-bottom: 1.25rem;
+      color: #3a3a35;
+      line-height: 1.75;
+    }
+
+    .disclaimer-content ul, .disclaimer-content ol {
+      margin: 1.25rem 0 1.5rem 1.75rem;
+      color: #3a3a35;
+      line-height: 1.75;
+    }
+
+    .disclaimer-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .disclaimer-content a {
+      color: var(--accent-fern);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s;
+    }
+
+    .disclaimer-content a:hover {
+      border-bottom-color: var(--accent-fern);
+    }
+
+    .disclaimer-content .highlight-box {
+      background: var(--bg-soft);
+      border-left: 5px solid var(--accent-clay);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 0 20px 0 20px;
+    }
+
+    .disclaimer-content .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .disclaimer-content .meta {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .disclaimer-content .last-updated {
+      display: inline-block;
+      background: var(--surface-muted);
+      padding: 0.4rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .disclaimer-content .divider-wavy {
+      width: 100%;
+      height: 20px;
+      background: repeating-linear-gradient(90deg, var(--accent-sage) 0px, var(--accent-sage) 2px, transparent 2px, transparent 8px);
+      opacity: 0.3;
+      margin: 2.5rem 0;
+    }
+
+    /* Disclaimer emphasis block */
+    .disclaimer-emphasis {
+      background: #fdf9f3;
+      border: 1px solid #e3d9cc;
+      border-radius: 24px;
+      padding: 2rem 2.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #4a4a40;
+    }
+
+    .disclaimer-emphasis i {
+      color: var(--accent-clay);
+      margin-right: 0.5rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .disclaimer-content {
+        padding: 2.5rem 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-actions .subscribe-btn {
+        display: none;
+      }
+      .page-header {
+        padding: 2rem 0 1rem;
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      .page-header .subhead {
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+      .disclaimer-content {
+        padding: 1.75rem;
+        border-radius: 0 30px 0 30px;
+      }
+      .disclaimer-content h2 {
+        font-size: 1.5rem;
+      }
+      .disclaimer-content h3 {
+        font-size: 1.15rem;
+      }
+      .disclaimer-section {
+        padding: 2rem 0 3rem;
+      }
+      .disclaimer-content .highlight-box {
+        padding: 1.25rem 1.5rem;
+      }
+      .disclaimer-emphasis {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 1rem;
+      }
+      .logo-text span:first-child {
+        font-size: 1.1rem;
+      }
+      .logo-mark {
+        width: 28px;
+        height: 28px;
+      }
+      .page-header h1 {
+        font-size: 2rem;
+      }
+      .disclaimer-content {
+        padding: 1.25rem;
+      }
+      .disclaimer-emphasis {
+        padding: 1.25rem;
+      }
+    }
+
+    /* ---------- UTILITY / ANIMATION ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 2px solid var(--accent-clay);
+      outline-offset: 2px;
+    }
+
+    /* ---------- FOOTER (same as homepage) ---------- */
+    .site-footer {
+      background: #1e2a1e;
+      color: #d9d6cf;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+      border-top: 4px solid var(--accent-gold);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo-text span:first-child {
+      color: #f6f3ee;
+    }
+
+    .footer-brand .logo-text span:last-child {
+      color: #a8a89e;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #b6b6ae;
+      margin: 1.5rem 0;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      color: #e3e0d8;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-col a {
+      color: #b6b6ae;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #f6f3ee;
+    }
+
+    .footer-newsletter p {
+      font-size: 0.9rem;
+      color: #b6b6ae;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      border: 1px solid #3f4a3a;
+      border-radius: 40px;
+      overflow: hidden;
+      background: #2b3a2b;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      color: #f6f3ee;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #8a8a80;
+    }
+
+    .newsletter-form button {
+      background: var(--accent-gold);
+      border: none;
+      padding: 0 1.5rem;
+      color: #1e2a1e;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .newsletter-form button:hover {
+      background: #b8924a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2f3a2f;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8a80;
+    }
+
+    .footer-bottom a {
+      color: #a8a89e;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      color: #f6f3ee;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      color: #a8a89e;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="Yonder Garden Works home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">
+          <span>Yonder</span>
+          <span>Garden Works</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="search-toggle" aria-label="Search the garden"><i class="fas fa-search"></i></button>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+        <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Honest <em>disclaimer</em>.</h1>
+      <p class="subhead">
+        We share gardening knowledge in good faith — but every garden is different. 
+        Always observe, adapt, and trust your own experience first.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== DISCLAIMER SECTION ========== -->
+  <section class="disclaimer-section">
+    <div class="container-narrow">
+      <div class="disclaimer-content reveal">
+        <span class="last-updated"><i class="fas fa-leaf" style="margin-right: 0.4rem;"></i> Last updated: March 2025</span>
+
+        <p class="body-text">
+          The information provided by Yonder Garden Works (“we”, “us”, “our”) on 
+          <a href="index.html">yondergardenworks.com</a> (the “Site”) is for general 
+          informational and educational purposes only. All information on the Site is 
+          provided in good faith, but we make no representation or warranty of any kind 
+          regarding the accuracy, adequacy, validity, reliability, or completeness of any 
+          information on the Site.
+        </p>
+
+        <div class="disclaimer-emphasis">
+          <i class="fas fa-seedling"></i>
+          <strong>Under no circumstance shall we have any liability to you for any loss or damage 
+          of any kind incurred as a result of the use of the Site or reliance on any information 
+          provided on the Site. Your use of the Site and your reliance on any information is 
+          solely at your own risk.</strong>
+        </div>
+
+        <h2>1. Gardening is contextual</h2>
+        <p>
+          Gardening advice is inherently local. Soil type, microclimate, elevation, humidity, 
+          frost dates, pest pressure, and countless other variables differ from garden to garden. 
+          What works beautifully in one region may fail in another. We encourage you to treat 
+          our articles as a starting point for your own experimentation — not as prescriptive 
+          formulas.
+        </p>
+        <p>
+          Always cross‑reference with local extension services, trusted regional growers, and 
+          your own careful observation of your specific site.
+        </p>
+
+        <h2>2. External links disclaimer</h2>
+        <p>
+          The Site may contain (or you may be sent through the Site) links to other websites 
+          or content belonging to or originating from third parties, or links to websites and 
+          features in banners or other advertising. Such external links are not investigated, 
+          monitored, or checked for accuracy, adequacy, validity, reliability, availability, 
+          or completeness by us.
+        </p>
+        <p>
+          We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or 
+          reliability of any information offered by third‑party websites linked through the 
+          Site, or any website or feature linked in any banner or other advertising. We will 
+          not be a party to or in any way be responsible for monitoring any transaction between 
+          you and third‑party providers of products or services.
+        </p>
+
+        <h2>3. Professional advice disclaimer</h2>
+        <p>
+          The Site cannot and does not contain professional horticultural, agricultural, 
+          veterinary, or legal advice. The gardening and plant‑care information is provided 
+          for general informational and educational purposes only and is not a substitute 
+          for professional advice.
+        </p>
+        <p>
+          Before taking any actions based upon such information, we encourage you to consult 
+          with the appropriate professionals. We do not provide any kind of professional 
+          advice. The use or reliance of any information contained on this Site is solely at 
+          your own risk.
+        </p>
+
+        <h2>4. Plant safety & toxicity</h2>
+        <p>
+          Some plants are toxic to humans, pets, or livestock. While we strive to mention 
+          safety considerations where relevant, we cannot guarantee that every article 
+          includes comprehensive toxicity information. Always verify plant safety with 
+          reliable sources such as your local poison control centre, veterinarian, or 
+          reputable botanical databases before introducing new plants to your home, garden, 
+          or landscape.
+        </p>
+
+        <h2>5. Results will vary</h2>
+        <p>
+          Any testimonials, before‑and‑after stories, or yield claims shared on the Site are 
+          real‑world examples, but they are not guarantees. Your results will depend on 
+          factors entirely outside our control, including but not limited to weather, soil, 
+          water quality, pests, disease, and your own level of care and experience.
+        </p>
+
+        <h2>6. No warranties</h2>
+        <p>
+          The Site is provided “as is” and “as available.” We make no warranties, express 
+          or implied, regarding the operation of the Site or the information, content, 
+          materials, or products included on the Site. To the fullest extent permissible 
+          by applicable law, we disclaim all warranties, express or implied, including 
+          implied warranties of merchantability and fitness for a particular purpose.
+        </p>
+
+        <div class="divider-wavy"></div>
+
+        <h2>7. Limitation of liability</h2>
+        <p>
+          In no event shall Yonder Garden Works, its authors, contributors, or affiliates 
+          be liable for any direct, indirect, incidental, special, consequential, or 
+          punitive damages arising out of or related to your use of the Site or reliance 
+          on any information provided, even if advised of the possibility of such damages. 
+          This includes, without limitation, damage to plants, property, or personal injury.
+        </p>
+
+        <h2>8. Changes to this disclaimer</h2>
+        <p>
+          We may update this Disclaimer from time to time. We will revise the “last updated” 
+          date at the top of this page. We encourage you to review this page periodically 
+          to stay informed. Your continued use of the Site after any changes constitutes 
+          acceptance of the updated Disclaimer.
+        </p>
+
+        <h2>9. Contact</h2>
+        <p>
+          If you have any questions about this Disclaimer, please reach out.
+        </p>
+        <p>
+          <strong>Yonder Garden Works — Legal</strong><br>
+          1420 Willow Row, Portland, OR 97214<br>
+          <a href="mailto:legal@yondergardenworks.com">legal@yondergardenworks.com</a>
+        </p>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+          <i class="fas fa-hand-holding-heart" style="margin-right: 0.4rem; color: var(--accent-sage);"></i>
+          We write with care, but the garden always has the final word. Grow well.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: #f6f3ee;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            <span class="logo-text">
+              <span>Yonder</span>
+              <span style="color: #a8a89e;">Garden Works</span>
+            </span>
+          </a>
+          <p>A reader-supported journal for gardeners who want to grow with intention. 
+            No ads, no fluff — just deep knowledge rooted in observation.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="#">Soil &amp; Compost</a></li>
+            <li><a href="#">Seed Starting</a></li>
+            <li><a href="#">Perennials</a></li>
+            <li><a href="#">Water Wisdom</a></li>
+            <li><a href="#">Pest Balance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Publication</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Archive</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Field notes</h4>
+          <p>Monthly-ish letters with practical tips and seasonal reminders.</p>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Your email" aria-label="Email address" required>
+            <button type="submit">Join</button>
+          </form>
+          <p style="font-size: 0.7rem; margin-top: 0.75rem; color: #7a7a70;">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Yonder Garden Works. All rights reserved. Built with care.</div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- minimal script for reveal, mobile menu, and demo -->
+  <script>
+    // Intersection Observer for reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // simple mobile menu placeholder
+    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+      alert('Mobile navigation panel would open here — designed with a slide-in field index. (Demo)');
+    });
+
+    // search toggle demo
+    document.querySelector('.search-toggle')?.addEventListener('click', () => {
+      alert('Search overlay — type to explore 47+ guides. (Demo)');
+    });
+  </script>
+</body>
+</html>

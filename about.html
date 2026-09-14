@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Yonder Garden Works — Cultivating a deeper garden intelligence</title>
+  <meta name="description" content="Learn about Yonder Garden Works — a field guide for thoughtful growers. Our story, principles, and the people behind the journal.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Yonder Garden Works — Cultivating a deeper garden intelligence">
+  <meta property="og:description" content="Field-tested knowledge, ecological insight, and seasonal guidance for gardeners who think long-term.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=630&fit=crop">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ---------- RESET & GLOBAL ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: #f6f3ee;
+      color: #2b2a26;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* ---------- TYPOGRAPHY SYSTEM ---------- */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #1e2a1e;
+    }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4.75rem); font-weight: 400; line-height: 1.05; }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 400; }
+    h3 { font-size: clamp(1.35rem, 2vw, 1.75rem); font-weight: 500; }
+    h4 { font-size: 1.25rem; font-weight: 500; }
+    h5 { font-size: 1.1rem; font-weight: 600; }
+
+    .body-text {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: #3a3a35;
+    }
+
+    .caption, .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #6b6b60;
+    }
+
+    .small {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --bg-paper: #f6f3ee;
+      --bg-soft: #ede8e0;
+      --surface: #ffffff;
+      --surface-muted: #f0ede7;
+      --text-primary: #1e2a1e;
+      --text-secondary: #3a3a35;
+      --text-muted: #6b6b60;
+      --border-light: #dad6cd;
+      --border-medium: #c4bfb5;
+      --accent-moss: #5c6e4f;
+      --accent-clay: #b86b4b;
+      --accent-sage: #8a9a7e;
+      --accent-fern: #3f5a3f;
+      --accent-gold: #c9a56b;
+    }
+
+    /* ---------- LAYOUT CONTAINERS ---------- */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .container-narrow {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .container-wide {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+    .site-nav {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border-light);
+      background: var(--bg-paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      background: rgba(246, 243, 238, 0.92);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-fern);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo-mark::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .logo-text span:last-child {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--accent-fern);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-fern);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .search-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0.4rem;
+      border-radius: 50%;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      background: var(--surface-muted);
+    }
+
+    .subscribe-btn {
+      background: var(--accent-fern);
+      color: #f6f3ee;
+      border: none;
+      padding: 0.55rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .subscribe-btn:hover {
+      background: #2f452f;
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* ---------- PAGE HEADER (ABOUT) ---------- */
+    .page-header {
+      padding: 3rem 0 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .page-header h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header .subhead {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #3f4a3a;
+      max-width: 700px;
+      border-left: 3px solid var(--accent-sage);
+      padding-left: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 0.75rem 0 0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--accent-fern);
+    }
+
+    /* ---------- ABOUT GRID / SPLIT ---------- */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      padding: 3.5rem 0 2rem;
+      align-items: start;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin: 2rem 0 1rem;
+    }
+
+    .about-text h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .about-text p {
+      margin-bottom: 1.25rem;
+      color: #3a3a35;
+      line-height: 1.8;
+    }
+
+    .about-text .lead {
+      font-size: 1.2rem;
+      font-family: 'Fraunces', serif;
+      color: #1e2a1e;
+      line-height: 1.6;
+      border-left: 3px solid var(--accent-clay);
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .about-image {
+      border-radius: 0px 60px 0px 60px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -15px rgba(30, 42, 30, 0.15);
+      background: var(--surface);
+      position: sticky;
+      top: 100px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+      transition: transform 0.8s ease;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.02);
+    }
+
+    .about-caption {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ---------- PRINCIPLES (specimen style) ---------- */
+    .principles-section {
+      padding: 3rem 0 2rem;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+
+    .principles-section h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .principles-section .section-sub {
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem 2rem;
+    }
+
+    .principle-card {
+      background: transparent;
+      border-top: 2px solid var(--accent-sage);
+      padding-top: 1.5rem;
+    }
+
+    .principle-card i {
+      font-size: 1.5rem;
+      color: var(--accent-clay);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .principle-card h3 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .principle-card p {
+      font-size: 0.95rem;
+      color: #4b4b44;
+      line-height: 1.7;
+    }
+
+    /* ---------- TEAM / FIELD NOTES ---------- */
+    .team-section {
+      padding: 3rem 0 2rem;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+
+    .team-section h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-section .section-sub {
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-size: 1.05rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .team-member {
+      text-align: left;
+    }
+
+    .team-member img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 0px 40px 0px 40px;
+      margin-bottom: 1.25rem;
+      filter: grayscale(20%);
+      transition: filter 0.3s;
+    }
+
+    .team-member:hover img {
+      filter: grayscale(0%);
+    }
+
+    .team-member h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .team-member .role {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-clay);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .team-member p {
+      font-size: 0.95rem;
+      color: #4b4b44;
+      line-height: 1.7;
+    }
+
+    /* ---------- QUOTE BLOCK ---------- */
+    .quote-block {
+      background: #f0ede7;
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      margin: 3rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid var(--border-light);
+    }
+
+    .quote-block i {
+      font-size: 2rem;
+      color: var(--accent-gold);
+      margin-bottom: 1rem;
+      opacity: 0.6;
+    }
+
+    .quote-block blockquote {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      font-weight: 400;
+      line-height: 1.4;
+      color: #1e2a1e;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .quote-block cite {
+      font-style: normal;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ---------- CTA / SUBSCRIBE BAR ---------- */
+    .cta-bar {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: 40px;
+      padding: 2rem 2.5rem;
+      margin: 3rem 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      box-shadow: 0 8px 20px -10px rgba(0,0,0,0.05);
+    }
+
+    .cta-bar h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 0.25rem;
+    }
+
+    .cta-bar p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .cta-bar .subscribe-btn {
+      padding: 0.75rem 2rem;
+      font-size: 0.9rem;
+      background: var(--accent-clay);
+    }
+
+    .cta-bar .subscribe-btn:hover {
+      background: #9e5a3e;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      background: #1e2a1e;
+      color: #d9d6cf;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+      border-top: 4px solid var(--accent-gold);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo-text span:first-child {
+      color: #f6f3ee;
+    }
+
+    .footer-brand .logo-text span:last-child {
+      color: #a8a89e;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #b6b6ae;
+      margin: 1.5rem 0;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      color: #e3e0d8;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-col a {
+      color: #b6b6ae;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #f6f3ee;
+    }
+
+    .footer-newsletter p {
+      font-size: 0.9rem;
+      color: #b6b6ae;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      border: 1px solid #3f4a3a;
+      border-radius: 40px;
+      overflow: hidden;
+      background: #2b3a2b;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      color: #f6f3ee;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #8a8a80;
+    }
+
+    .newsletter-form button {
+      background: var(--accent-gold);
+      border: none;
+      padding: 0 1.5rem;
+      color: #1e2a1e;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .newsletter-form button:hover {
+      background: #b8924a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2f3a2f;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8a80;
+    }
+
+    .footer-bottom a {
+      color: #a8a89e;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      color: #f6f3ee;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      color: #a8a89e;
+      font-size: 1.1rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .about-split {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .about-image {
+        position: static;
+        max-width: 500px;
+      }
+      .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-actions .subscribe-btn {
+        display: none;
+      }
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+      .page-header .subhead {
+        font-size: 1rem;
+      }
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cta-bar {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 1rem;
+      }
+      .logo-text span:first-child {
+        font-size: 1.1rem;
+      }
+      .logo-mark {
+        width: 28px;
+        height: 28px;
+      }
+      .quote-block {
+        padding: 2rem 1.25rem;
+      }
+    }
+
+    /* ---------- REVEAL ANIMATION ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent-clay);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="Yonder Garden Works home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">
+          <span>Yonder</span>
+          <span>Garden Works</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page" style="color: var(--accent-fern);">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="search-toggle" aria-label="Search the garden"><i class="fas fa-search"></i></button>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+        <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <section class="page-header container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> <span>·</span> <span>About</span>
+    </div>
+    <h1>Cultivating a deeper garden intelligence.</h1>
+    <p class="subhead">
+      Yonder Garden Works is a reader-supported journal for growers who think in seasons, 
+      not shortcuts. We publish field-tested knowledge, ecological insight, and the quiet 
+      rhythm of working with living systems.
+    </p>
+  </section>
+
+  <!-- ========== ABOUT SPLIT ========== -->
+  <section class="container about-split">
+    <div class="about-text reveal">
+      <p class="lead">
+        We believe good gardening is less about control and more about observation — 
+        learning the patterns of soil, water, light, and time.
+      </p>
+
+      <p>
+        Yonder Garden Works began in 2025 as a personal field notebook: a place to record 
+        what actually worked, what failed, and why. That notebook grew into a journal 
+        read by thousands of growers who want depth over drama, and practical wisdom 
+        over quick fixes.
+      </p>
+
+      <p>
+        Every guide we publish is rooted in direct experience. We don't repackage 
+        press releases or chase viral trends. Instead, we test methods across seasons, 
+        compare notes with other growers, and write with the long view in mind.
+      </p>
+
+      <h2>What we stand for</h2>
+      <p>
+        Our editorial approach is simple: if it doesn't help you grow healthier plants 
+        and a healthier relationship with your land, we don't publish it. No ads, no 
+        sponsored content, no fluff. Just the kind of knowledge that makes you a 
+        more confident, observant gardener.
+      </p>
+
+      <p>
+        We cover soil biology, seed starting, perennial systems, water wisdom, pest 
+        balance, and garden design — always with an eye toward ecological function 
+        and long-term resilience.
+      </p>
+    </div>
+
+    <div class="about-image reveal">
+      <img 
+        src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&h=1000&fit=crop&q=85" 
+        alt="A gardener's hands tending to a lush perennial bed with asparagus and rhubarb, morning light."
+        loading="eager"
+      >
+      <div class="about-caption">
+        <span>Fig. 01 — The living soil</span>
+        <span>Yonder archive</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRINCIPLES ========== -->
+  <section class="container principles-section reveal">
+    <h2>Our field principles</h2>
+    <p class="section-sub">Four ideas that shape everything we publish.</p>
+
+    <div class="principles-grid">
+      <div class="principle-card">
+        <i class="fas fa-seedling"></i>
+        <h3>Observe before acting</h3>
+        <p>We watch, record, and wait. The garden is the best teacher — our job is to pay attention and share what we learn without rushing to conclusions.</p>
+      </div>
+      <div class="principle-card">
+        <i class="fas fa-water"></i>
+        <h3>Work with ecology</h3>
+        <p>Healthy soil, diverse habitat, and closed-loop fertility are not add-ons. They are the foundation of a garden that gets better each year.</p>
+      </div>
+      <div class="principle-card">
+        <i class="fas fa-hourglass-half"></i>
+        <h3>Think in seasons</h3>
+        <p>We reject quick fixes and short-term thinking. Good gardening is a long conversation with place — and we write for the decade, not the week.</p>
+      </div>
+      <div class="principle-card">
+        <i class="fas fa-book-open"></i>
+        <h3>Share without fluff</h3>
+        <p>No ads, no hype, no miracle cures. We give you the real variables: what worked, what didn't, and how you can adapt it to your own ground.</p>
+      </div>
+      <div class="principle-card">
+        <i class="fas fa-hand-sparkles"></i>
+        <h3>Stay hands-on</h3>
+        <p>Every guide is written by someone who has actually grown the plants, built the soil, and solved the problems. We test before we tell.</p>
+      </div>
+      <div class="principle-card">
+        <i class="fas fa-globe"></i>
+        <h3>Grow resilience</h3>
+        <p>Whether you have a windowsill or a smallholding, we help you build a garden that can weather drought, pests, and changing seasons.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TEAM / FIELD NOTES ========== -->
+  <section class="container team-section reveal">
+    <h2>Field notes from the team</h2>
+    <p class="section-sub">The people who dig, plant, write, and revise.</p>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <img 
+          src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=600&h=600&fit=crop&q=80" 
+          alt="Portrait of M. Ellery, editor and field gardener." 
+          loading="lazy"
+        >
+        <h4>M. Ellery</h4>
+        <div class="role">Editor &amp; Field Gardener</div>
+        <p>Grows on a smallholding in the Pacific Northwest. Obsessed with soil biology, perennial vegetables, and the art of patient observation.</p>
+      </div>
+
+      <div class="team-member">
+        <img 
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&q=80" 
+          alt="Portrait of Jamal R., horticultural researcher." 
+          loading="lazy"
+        >
+        <h4>Jamal R.</h4>
+        <div class="role">Horticultural Researcher</div>
+        <p>Tests seed-starting methods, irrigation systems, and pest management strategies. Keeps meticulous records — and shares the failures too.</p>
+      </div>
+
+      <div class="team-member">
+        <img 
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop&q=80" 
+          alt="Portrait of Lin Okafor, garden designer and writer." 
+          loading="lazy"
+        >
+        <h4>Lin Okafor</h4>
+        <div class="role">Garden Designer &amp; Writer</div>
+        <p>Specializes in layered planting, habitat gardens, and four-season interest. Believes a beautiful garden and a functional one are the same thing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUOTE ========== -->
+  <div class="container reveal">
+    <div class="quote-block">
+      <i class="fas fa-quote-left"></i>
+      <blockquote>
+        “A garden is never finished — it is a conversation with place, weather, and time.”
+      </blockquote>
+      <cite>— M. Ellery, editor</cite>
+    </div>
+  </div>
+
+  <!-- ========== CTA / SUBSCRIBE ========== -->
+  <div class="container reveal">
+    <div class="cta-bar">
+      <div>
+        <h4>Field notes, delivered monthly-ish.</h4>
+        <p>Practical tips, seasonal reminders, and new guides from Yonder Garden Works.</p>
+      </div>
+      <a href="#" class="subscribe-btn">Join the newsletter →</a>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: #f6f3ee;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            <span class="logo-text">
+              <span>Yonder</span>
+              <span style="color: #a8a89e;">Garden Works</span>
+            </span>
+          </a>
+          <p>A reader-supported journal for gardeners who want to grow with intention. 
+            No ads, no fluff — just deep knowledge rooted in observation.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="#">Soil &amp; Compost</a></li>
+            <li><a href="#">Seed Starting</a></li>
+            <li><a href="#">Perennials</a></li>
+            <li><a href="#">Water Wisdom</a></li>
+            <li><a href="#">Pest Balance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Publication</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Archive</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Field notes</h4>
+          <p>Monthly-ish letters with practical tips and seasonal reminders.</p>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Your email" aria-label="Email address" required>
+            <button type="submit">Join</button>
+          </form>
+          <p style="font-size: 0.7rem; margin-top: 0.75rem; color: #7a7a70;">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Yonder Garden Works. All rights reserved. Built with care.</div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- minimal script for reveal and mobile menu (just for demo) -->
+  <script>
+    // Intersection Observer for reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // simple mobile menu placeholder
+    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+      alert('Mobile navigation panel would open here — designed with a slide-in field index. (Demo)');
+    });
+
+    // search toggle demo
+    document.querySelector('.search-toggle')?.addEventListener('click', () => {
+      alert('Search overlay — type to explore 47+ guides. (Demo)');
+    });
+  </script>
+</body>
+</html>

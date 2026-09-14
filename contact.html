@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Yonder Garden Works</title>
+  <meta name="description" content="Reach out to Yonder Garden Works — pitch a story, ask a gardening question, or just say hello. We read every note.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — Yonder Garden Works">
+  <meta property="og:description" content="Reach out to Yonder Garden Works — pitch a story, ask a gardening question, or just say hello.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=630&fit=crop">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ---------- RESET & GLOBAL ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: #f6f3ee;
+      color: #2b2a26;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      font-weight: 400;
+      overflow-x: hidden;
+    }
+
+    /* ---------- TYPOGRAPHY SYSTEM ---------- */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #1e2a1e;
+    }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4.75rem); font-weight: 400; line-height: 1.05; }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 400; }
+    h3 { font-size: clamp(1.35rem, 2vw, 1.75rem); font-weight: 500; }
+
+    .body-text {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: #3a3a35;
+    }
+
+    .caption, .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #6b6b60;
+    }
+
+    .small { font-size: 0.875rem; line-height: 1.5; }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --bg-paper: #f6f3ee;
+      --bg-soft: #ede8e0;
+      --surface: #ffffff;
+      --surface-muted: #f0ede7;
+      --text-primary: #1e2a1e;
+      --text-secondary: #3a3a35;
+      --text-muted: #6b6b60;
+      --border-light: #dad6cd;
+      --border-medium: #c4bfb5;
+      --accent-moss: #5c6e4f;
+      --accent-clay: #b86b4b;
+      --accent-sage: #8a9a7e;
+      --accent-fern: #3f5a3f;
+      --accent-gold: #c9a56b;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .container-narrow {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+    .site-nav {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border-light);
+      background: rgba(246, 243, 238, 0.92);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-fern);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo-mark::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .logo-text span:last-child {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--accent-fern);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-fern);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .search-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0.4rem;
+      border-radius: 50%;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      background: var(--surface-muted);
+    }
+
+    .subscribe-btn {
+      background: var(--accent-fern);
+      color: #f6f3ee;
+      border: none;
+      padding: 0.55rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .subscribe-btn:hover {
+      background: #2f452f;
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* ---------- PAGE HEADER (contact specific) ---------- */
+    .page-header {
+      padding: 3.5rem 0 2rem;
+      border-bottom: 1px solid var(--border-light);
+      background: linear-gradient(to bottom, #f6f3ee 0%, #f2efe8 100%);
+    }
+
+    .page-header h1 {
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      line-height: 1.02;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .page-header h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent-clay);
+    }
+
+    .page-header .subhead {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #3f4a3a;
+      max-width: 620px;
+      font-weight: 300;
+      border-left: 3px solid var(--accent-sage);
+      padding-left: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    /* ---------- CONTACT GRID ---------- */
+    .contact-section {
+      padding: 3.5rem 0 4rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    /* left side — info cards */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .info-block {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: 0 30px 0 30px;
+      padding: 1.75rem 2rem;
+      box-shadow: 0 6px 16px -8px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease;
+    }
+
+    .info-block:hover {
+      transform: translateY(-2px);
+    }
+
+    .info-block h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .info-block h3 i {
+      color: var(--accent-clay);
+      font-size: 1.1rem;
+      width: 1.5rem;
+    }
+
+    .info-block p {
+      font-size: 0.95rem;
+      color: #4b4b44;
+      line-height: 1.6;
+    }
+
+    .info-block a {
+      color: var(--accent-fern);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s;
+    }
+
+    .info-block a:hover {
+      border-bottom-color: var(--accent-fern);
+    }
+
+    .info-block .meta {
+      margin-top: 0.75rem;
+      display: block;
+      font-size: 0.7rem;
+    }
+
+    /* right side — form */
+    .contact-form-wrapper {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: 0 60px 0 60px;
+      padding: 2.5rem 2.5rem 2.75rem;
+      box-shadow: 0 15px 30px -12px rgba(30, 42, 30, 0.08);
+    }
+
+    .contact-form-wrapper h2 {
+      font-size: 1.9rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form-wrapper .form-intro {
+      font-size: 0.95rem;
+      color: #5a5a50;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group label .required {
+      color: var(--accent-clay);
+      margin-left: 0.2rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.85rem 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      background: var(--bg-paper);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      transition: border 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent-fern);
+      box-shadow: 0 0 0 3px rgba(63, 90, 63, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b6b60' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1.2rem center;
+      cursor: pointer;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .submit-btn {
+      background: var(--accent-fern);
+      color: #f6f3ee;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      font-family: 'Inter', sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .submit-btn:hover {
+      background: #2f452f;
+      transform: translateY(-1px);
+    }
+
+    .submit-btn i {
+      font-size: 0.9rem;
+    }
+
+    .form-footnote {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 1.25rem;
+      line-height: 1.5;
+    }
+
+    /* ---------- DIVIDER / DECOR ---------- */
+    .divider-wavy {
+      width: 100%;
+      height: 20px;
+      background: repeating-linear-gradient(90deg, var(--accent-sage) 0px, var(--accent-sage) 2px, transparent 2px, transparent 8px);
+      opacity: 0.3;
+      margin: 1rem 0;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-actions .subscribe-btn {
+        display: none;
+      }
+      .page-header {
+        padding: 2rem 0 1rem;
+      }
+      .page-header h1 {
+        font-size: 2.5rem;
+      }
+      .page-header .subhead {
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+      .contact-form-wrapper {
+        padding: 1.75rem;
+        border-radius: 0 30px 0 30px;
+      }
+      .info-block {
+        padding: 1.5rem;
+      }
+      .contact-section {
+        padding: 2rem 0 3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 1rem;
+      }
+      .logo-text span:first-child {
+        font-size: 1.1rem;
+      }
+      .logo-mark {
+        width: 28px;
+        height: 28px;
+      }
+      .page-header h1 {
+        font-size: 2rem;
+      }
+      .submit-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* ---------- UTILITY / ANIMATION ---------- */
+    .fade-up {
+      animation: fadeUp 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 2px solid var(--accent-clay);
+      outline-offset: 2px;
+    }
+
+    /* ---------- FOOTER (same as homepage) ---------- */
+    .site-footer {
+      background: #1e2a1e;
+      color: #d9d6cf;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+      border-top: 4px solid var(--accent-gold);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo-text span:first-child {
+      color: #f6f3ee;
+    }
+
+    .footer-brand .logo-text span:last-child {
+      color: #a8a89e;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #b6b6ae;
+      margin: 1.5rem 0;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      color: #e3e0d8;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-col a {
+      color: #b6b6ae;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #f6f3ee;
+    }
+
+    .footer-newsletter p {
+      font-size: 0.9rem;
+      color: #b6b6ae;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      border: 1px solid #3f4a3a;
+      border-radius: 40px;
+      overflow: hidden;
+      background: #2b3a2b;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      color: #f6f3ee;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #8a8a80;
+    }
+
+    .newsletter-form button {
+      background: var(--accent-gold);
+      border: none;
+      padding: 0 1.5rem;
+      color: #1e2a1e;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .newsletter-form button:hover {
+      background: #b8924a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2f3a2f;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8a80;
+    }
+
+    .footer-bottom a {
+      color: #a8a89e;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      color: #f6f3ee;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      color: #a8a89e;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="Yonder Garden Works home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">
+          <span>Yonder</span>
+          <span>Garden Works</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="search-toggle" aria-label="Search the garden"><i class="fas fa-search"></i></button>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+        <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Let’s <em>talk</em> gardens.</h1>
+      <p class="subhead">
+        Whether you have a question about soil, want to pitch a story, or just want to share a photo of your 
+        first ripe tomato — we read every note. Response time is usually 2–4 days.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+      
+      <!-- LEFT: contact info blocks -->
+      <div class="contact-info">
+        <div class="info-block reveal">
+          <h3><i class="fas fa-envelope"></i> Email</h3>
+          <p>
+            For general inquiries:<br>
+            <a href="mailto:hello@yondergardenworks.com">hello@yondergardenworks.com</a>
+          </p>
+          <p style="margin-top: 0.75rem;">
+            For editorial / pitches:<br>
+            <a href="mailto:editor@yondergardenworks.com">editor@yondergardenworks.com</a>
+          </p>
+          <span class="meta">We reply within 2–4 days</span>
+        </div>
+
+        <div class="info-block reveal">
+          <h3><i class="fas fa-map-pin"></i> Field office</h3>
+          <p>
+            Yonder Garden Works<br>
+            1420 Willow Row<br>
+            Portland, OR 97214
+          </p>
+          <p style="margin-top: 0.75rem; font-size: 0.85rem; color: #6b6b60;">
+            (Not a retail space — visits by appointment only.)
+          </p>
+        </div>
+
+        <div class="info-block reveal">
+          <h3><i class="fas fa-clock"></i> Response times</h3>
+          <p>
+            <strong>General questions:</strong> 2–3 days<br>
+            <strong>Pitches &amp; submissions:</strong> 5–7 days<br>
+            <strong>Corrections:</strong> 1–2 days
+          </p>
+          <span class="meta">We read everything, even if we can’t reply to every note.</span>
+        </div>
+
+        <!-- little decorative divider -->
+        <div class="divider-wavy" style="margin: 0.5rem 0;"></div>
+
+        <p class="caption" style="color: var(--accent-clay); margin-top: 0.5rem;">From the editor</p>
+        <p style="font-family: 'Fraunces', serif; font-size: 1.1rem; line-height: 1.5; color: #2b3a2b; margin-top: 0.25rem;">
+          “We built this journal for the curious grower. Don’t hesitate to reach out — the best ideas often come from readers.”
+        </p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">— M. Ellery</p>
+      </div>
+
+      <!-- RIGHT: contact form -->
+      <div class="contact-form-wrapper reveal">
+        <h2>Send a note</h2>
+        <p class="form-intro">
+          Fill in the form below and we’ll get back to you as soon as we can. 
+          Fields marked with <span style="color: var(--accent-clay);">*</span> are required.
+        </p>
+
+        <form action="#" method="post" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Ada Green" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="general">General question</option>
+              <option value="pitch">Story pitch / editorial</option>
+              <option value="correction">Correction or update</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your message <span class="required">*</span></label>
+            <textarea id="message" name="message" placeholder="Tell us what’s on your mind — gardening questions, feedback, or just a hello." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            Send message <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <p class="form-footnote">
+            By sending this form you agree to our <a href="privacy.html" style="color: var(--accent-fern);">privacy policy</a>. 
+            We’ll never share your email with anyone else.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color: #f6f3ee;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            <span class="logo-text">
+              <span>Yonder</span>
+              <span style="color: #a8a89e;">Garden Works</span>
+            </span>
+          </a>
+          <p>A reader-supported journal for gardeners who want to grow with intention. 
+            No ads, no fluff — just deep knowledge rooted in observation.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="#">Soil &amp; Compost</a></li>
+            <li><a href="#">Seed Starting</a></li>
+            <li><a href="#">Perennials</a></li>
+            <li><a href="#">Water Wisdom</a></li>
+            <li><a href="#">Pest Balance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Publication</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Archive</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Field notes</h4>
+          <p>Monthly-ish letters with practical tips and seasonal reminders.</p>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Your email" aria-label="Email address" required>
+            <button type="submit">Join</button>
+          </form>
+          <p style="font-size: 0.7rem; margin-top: 0.75rem; color: #7a7a70;">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Yonder Garden Works. All rights reserved. Built with care.</div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="cookies.html">Cookies</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- minimal script for reveal, mobile menu, and form demo -->
+  <script>
+    // Intersection Observer for reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // simple mobile menu placeholder
+    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+      alert('Mobile navigation panel would open here — designed with a slide-in field index. (Demo)');
+    });
+
+    // search toggle demo
+    document.querySelector('.search-toggle')?.addEventListener('click', () => {
+      alert('Search overlay — type to explore 47+ guides. (Demo)');
+    });
+
+    // contact form submit demo (prevent actual submission)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for your message! This is a demo — no data was sent. In a live site, your note would be delivered to the Yonder Garden Works inbox.');
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>

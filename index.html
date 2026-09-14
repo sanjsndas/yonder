@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yonder Garden Works — Cultivating a deeper garden intelligence</title>
+  <meta name="description" content="Yonder Garden Works is a premium gardening journal offering field-tested knowledge, seasonal guidance, and ecological insight for serious growers.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yonder Garden Works — Cultivating a deeper garden intelligence">
+  <meta property="og:description" content="Field-tested knowledge, ecological insight, and seasonal guidance for gardeners who think long-term.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=630&fit=crop">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+  <!-- Icons (feather-like minimal) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ---------- RESET & GLOBAL ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: #f6f3ee;
+      color: #2b2a26;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* ---------- TYPOGRAPHY SYSTEM ---------- */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Fraunces', serif;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #1e2a1e;
+    }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4.75rem); font-weight: 400; line-height: 1.05; }
+    h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 400; }
+    h3 { font-size: clamp(1.35rem, 2vw, 1.75rem); font-weight: 500; }
+    h4 { font-size: 1.25rem; font-weight: 500; }
+    h5 { font-size: 1.1rem; font-weight: 600; }
+
+    .body-text {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: #3a3a35;
+    }
+
+    .caption, .meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: #6b6b60;
+    }
+
+    .small {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    /* ---------- COLOR SYSTEM ---------- */
+    :root {
+      --bg-paper: #f6f3ee;
+      --bg-soft: #ede8e0;
+      --surface: #ffffff;
+      --surface-muted: #f0ede7;
+      --text-primary: #1e2a1e;
+      --text-secondary: #3a3a35;
+      --text-muted: #6b6b60;
+      --border-light: #dad6cd;
+      --border-medium: #c4bfb5;
+      --accent-moss: #5c6e4f;
+      --accent-clay: #b86b4b;
+      --accent-sage: #8a9a7e;
+      --accent-fern: #3f5a3f;
+      --accent-gold: #c9a56b;
+    }
+
+    /* ---------- LAYOUT CONTAINERS ---------- */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .container-narrow {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .container-wide {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+    .site-nav {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border-light);
+      background: var(--bg-paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      background: rgba(246, 243, 238, 0.92);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-fern);
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo-mark::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .logo-text span:last-child {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--accent-fern);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-fern);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .search-toggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 0.4rem;
+      border-radius: 50%;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-toggle:hover {
+      background: var(--surface-muted);
+    }
+
+    .subscribe-btn {
+      background: var(--accent-fern);
+      color: #f6f3ee;
+      border: none;
+      padding: 0.55rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      text-decoration: none;
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .subscribe-btn:hover {
+      background: #2f452f;
+      transform: translateY(-1px);
+    }
+
+    /* mobile menu */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* ---------- HERO / MASTHEAD (unique: field notes layout) ---------- */
+    .masthead {
+      padding: 4rem 0 2rem;
+      border-bottom: 1px solid var(--border-light);
+      background: linear-gradient(to bottom, #f6f3ee 0%, #f2efe8 100%);
+    }
+
+    .masthead-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .masthead-left h1 {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 1.02;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      color: #1e2a1e;
+      letter-spacing: -0.03em;
+    }
+
+    .masthead-left h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent-clay);
+    }
+
+    .masthead-sub {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #3f4a3a;
+      max-width: 550px;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      border-left: 3px solid var(--accent-sage);
+      padding-left: 1.5rem;
+    }
+
+    .masthead-meta {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 1.5rem;
+    }
+
+    .masthead-meta i {
+      margin-right: 0.4rem;
+      color: var(--accent-sage);
+    }
+
+    .masthead-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hero-image-wrapper {
+      border-radius: 0px 40px 0px 40px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -15px rgba(30, 42, 30, 0.15);
+      background: var(--surface);
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+      transition: transform 0.6s ease;
+    }
+
+    .hero-image-wrapper:hover img {
+      transform: scale(1.02);
+    }
+
+    .hero-caption {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ---------- SECTION DIVIDER ---------- */
+    .divider-wavy {
+      width: 100%;
+      height: 20px;
+      background: repeating-linear-gradient(90deg, var(--accent-sage) 0px, var(--accent-sage) 2px, transparent 2px, transparent 8px);
+      opacity: 0.3;
+      margin: 0.5rem 0;
+    }
+
+    /* ---------- CORE HOMEPAGE ARCHITECTURE: "FIELD INDEX" ---------- */
+    /* not a blog roll — a structured knowledge garden */
+    .field-index {
+      padding: 3rem 0 4rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.9rem;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-header h2 i {
+      color: var(--accent-clay);
+      font-size: 1.3rem;
+    }
+
+    .section-link {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-fern);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s;
+    }
+
+    .section-link:hover {
+      border-bottom-color: var(--accent-fern);
+    }
+
+    /* unique card system: "specimen cards" */
+    .index-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem 1.5rem;
+    }
+
+    .specimen-card {
+      background: transparent;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .specimen-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .specimen-card .meta {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--accent-moss);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .specimen-card h3 {
+      font-size: 1.3rem;
+      line-height: 1.3;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .specimen-card h3 a {
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: color 0.15s;
+    }
+
+    .specimen-card h3 a:hover {
+      color: var(--accent-clay);
+    }
+
+    .specimen-card p {
+      font-size: 0.9rem;
+      color: #4b4b44;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .specimen-footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      margin-top: auto;
+    }
+
+    /* different card style for featured / split */
+    .feature-split {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr;
+      gap: 2rem;
+      margin: 3rem 0;
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: 0 60px 0 60px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -10px rgba(0,0,0,0.05);
+    }
+
+    .feature-split-content {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .feature-split-content .meta {
+      margin-bottom: 0.75rem;
+      color: var(--accent-clay);
+    }
+
+    .feature-split-content h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .feature-split-content p {
+      margin-bottom: 1.5rem;
+      color: #3a3a35;
+    }
+
+    .feature-split-image {
+      background: var(--surface-muted);
+      min-height: 320px;
+      overflow: hidden;
+    }
+
+    .feature-split-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+
+    .feature-split:hover .feature-split-image img {
+      transform: scale(1.03);
+    }
+
+    /* ---------- INFOGRAPHIC BLOCK ---------- */
+    .infographic-block {
+      background: #f0ede7;
+      border: 1px solid var(--border-light);
+      border-radius: 24px;
+      padding: 2.5rem;
+      margin: 3rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .infographic-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .infographic-text p {
+      color: #3f4a3a;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .infographic-visual {
+      background: var(--surface);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px -8px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .infographic-visual svg {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+    }
+
+    /* ---------- CATEGORY EXPLORER (unique) ---------- */
+    .category-explorer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      padding: 2rem 0 1rem;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      margin: 2rem 0;
+    }
+
+    .category-pill {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 0.4rem 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .category-pill i {
+      font-size: 0.7rem;
+      color: var(--accent-sage);
+    }
+
+    .category-pill:hover {
+      color: var(--accent-fern);
+      border-bottom-color: var(--accent-fern);
+    }
+
+    /* ---------- FOOTER (premium, asymmetric) ---------- */
+    .site-footer {
+      background: #1e2a1e;
+      color: #d9d6cf;
+      padding: 4rem 0 2rem;
+      margin-top: 4rem;
+      border-top: 4px solid var(--accent-gold);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo-text span:first-child {
+      color: #f6f3ee;
+    }
+
+    .footer-brand .logo-text span:last-child {
+      color: #a8a89e;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #b6b6ae;
+      margin: 1.5rem 0;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      color: #e3e0d8;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-col a {
+      color: #b6b6ae;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #f6f3ee;
+    }
+
+    .footer-newsletter p {
+      font-size: 0.9rem;
+      color: #b6b6ae;
+      margin-bottom: 1rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      border: 1px solid #3f4a3a;
+      border-radius: 40px;
+      overflow: hidden;
+      background: #2b3a2b;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      color: #f6f3ee;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #8a8a80;
+    }
+
+    .newsletter-form button {
+      background: var(--accent-gold);
+      border: none;
+      padding: 0 1.5rem;
+      color: #1e2a1e;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .newsletter-form button:hover {
+      background: #b8924a;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #2f3a2f;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #8a8a80;
+    }
+
+    .footer-bottom a {
+      color: #a8a89e;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      color: #f6f3ee;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      color: #a8a89e;
+      font-size: 1.1rem;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 1024px) {
+      .masthead-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .index-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .feature-split {
+        grid-template-columns: 1fr;
+      }
+      .infographic-block {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .nav-actions .subscribe-btn {
+        display: none;
+      }
+      .masthead {
+        padding: 2rem 0 1rem;
+      }
+      .masthead-left h1 {
+        font-size: 2.5rem;
+      }
+      .index-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .feature-split-content {
+        padding: 1.75rem;
+      }
+      .infographic-block {
+        padding: 1.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .category-explorer {
+        gap: 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 1rem;
+      }
+      .logo-text span:first-child {
+        font-size: 1.1rem;
+      }
+      .logo-mark {
+        width: 28px;
+        height: 28px;
+      }
+      .masthead-left h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* ---------- UTILITY / ANIMATION ---------- */
+    .fade-up {
+      animation: fadeUp 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* scroll reveal (minimal) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* focus */
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent-clay);
+      outline-offset: 2px;
+    }
+
+    /* breadcrumb (article page context) — but here used minimal */
+    .breadcrumb {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      padding: 1rem 0 0;
+    }
+    .breadcrumb a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      color: var(--accent-fern);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo" aria-label="Yonder Garden Works home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">
+          <span>Yonder</span>
+          <span>Garden Works</span>
+        </span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+           <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="search-toggle" aria-label="Search the garden"><i class="fas fa-search"></i></button>
+        <a href="#" class="subscribe-btn">Subscribe</a>
+        <button class="menu-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MASTHEAD / HERO (unique split) ========== -->
+  <section class="masthead">
+    <div class="container masthead-grid">
+      <div class="masthead-left fade-up">
+        <h1>Cultivating a <em>deeper</em> garden intelligence.</h1>
+        <p class="masthead-sub">
+          Yonder Garden Works is a field guide for the thoughtful grower — no fluff, no fleeting trends. 
+          Just tested methods, ecological insight, and the quiet rhythm of the seasons.
+        </p>
+        <div class="masthead-meta">
+          <span><i class="fas fa-seedling"></i> Est. 2025</span>
+          <span><i class="fas fa-map-pin"></i> Field-tested</span>
+          <span><i class="fas fa-book-open"></i> 47 guides</span>
+        </div>
+      </div>
+      <div class="masthead-right fade-up">
+        <div class="hero-image-wrapper">
+          <!-- Hero image: hands in soil, close-up, natural light -->
+          <img 
+            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=1000&fit=crop&q=85" 
+            alt="Hands holding rich, dark soil with a young seedling, ready for planting in a garden bed."
+            width="800" height="1000"
+            loading="eager"
+          >
+        </div>
+        <div class="hero-caption">
+          <span>Fig. 01 — The living soil</span>
+          <span>Yonder archive</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FIELD INDEX (knowledge hub architecture) ========== -->
+  <section class="field-index container">
+    <!-- breadcrumb-like context -->
+    <div class="breadcrumb" aria-hidden="true">
+      <span>Field index</span> · <span>Current season: Late summer</span>
+    </div>
+
+    <!-- 1. CATEGORY EXPLORER / TOPIC NAVIGATOR (unique pill system) -->
+    <div class="category-explorer" role="navigation" aria-label="Topic navigator">
+      <a href="#" class="category-pill"><i class="fas fa-circle"></i> Soil &amp; Compost</a>
+      <a href="#" class="category-pill"><i class="fas fa-circle"></i> Seed Starting</a>
+      <a href="#" class="category-pill"><i class="fas fa-circle"></i> Perennials</a>
+      <a href="#" class="category-pill"><i class="fas fa-circle"></i> Vegetable Growing</a>
+      <a href="#" class="category-pill"><i class="fas fa-circle"></i> Water Wisdom</a>
+      <a href="#" class="category-pill"><i class="fas fa-circle"></i> Garden Design</a>
+      <a href="#" class="category-pill"><i class="fas fa-circle"></i> Pests &amp; Pollinators</a>
+    </div>
+
+    <!-- 2. SECTION: START HERE (4 specimen cards – horizontal, text only, no images) -->
+    <div class="section-header">
+      <h2><i class="fas fa-compass"></i> Start here</h2>
+      <a href="#" class="section-link">All beginner guides →</a>
+    </div>
+
+    <div class="index-grid">
+      <article class="specimen-card reveal">
+        <div class="meta">Soil · 12 min read</div>
+        <h3><a href="#">The living soil: a beginner’s guide to soil biology</a></h3>
+        <p>Understand the microscopic universe beneath your feet — and why it matters more than any fertilizer.</p>
+        <div class="specimen-footer">
+          <span>Part 1 of 4</span>
+          <span>Updated Aug 2025</span>
+        </div>
+      </article>
+
+      <article class="specimen-card reveal">
+        <div class="meta">Seeds · 18 min read</div>
+        <h3><a href="#">Seed starting without a greenhouse: the windowsill method</a></h3>
+        <p>Light, temperature, and timing — a complete walkthrough for starting strong seedlings indoors.</p>
+        <div class="specimen-footer">
+          <span>Beginner</span>
+          <span>Updated Jul 2025</span>
+        </div>
+      </article>
+
+      <article class="specimen-card reveal">
+        <div class="meta">Water · 9 min read</div>
+        <h3><a href="#">Watering deeply: the one habit that changes everything</a></h3>
+        <p>Why shallow watering harms roots, and how to water like a farmer — even in containers.</p>
+        <div class="specimen-footer">
+          <span>Technique</span>
+          <span>Updated Jun 2025</span>
+        </div>
+      </article>
+
+      <article class="specimen-card reveal">
+        <div class="meta">Compost · 14 min read</div>
+        <h3><a href="#">Hot composting: a field-tested blueprint</a></h3>
+        <p>Carbon, nitrogen, moisture, and turning — the ratios and rhythms that actually work.</p>
+        <div class="specimen-footer">
+          <span>Intermediate</span>
+          <span>Updated May 2025</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- 3. FEATURED SPLIT – one large image + content (featured article image #3) -->
+    <article class="feature-split reveal">
+      <div class="feature-split-content">
+        <div class="meta">Featured · Perennial agriculture</div>
+        <h2>Growing a perennial kitchen garden: a 10-year vision</h2>
+        <p>Asparagus, rhubarb, sorrel, and Jerusalem artichokes — the crops that reward patience. 
+          How to plan, plant, and care for a garden that comes back stronger every year.</p>
+        <a href="#" class="section-link" style="align-self: flex-start;">Read the guide →</a>
+      </div>
+      <div class="feature-split-image">
+        <img 
+          src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?w=800&h=600&fit=crop&q=85" 
+          alt="Lush perennial garden bed with asparagus fronds and rhubarb leaves, bathed in morning light."
+          loading="lazy"
+        >
+      </div>
+    </article>
+
+    <!-- 4. INFOGRAPHIC BLOCK (visual explanation) -->
+    <div class="infographic-block reveal">
+      <div class="infographic-text">
+        <h3>The soil food web — explained</h3>
+        <p>Bacteria, fungi, protozoa, nematodes, and arthropods all play a role in cycling nutrients. 
+          This simple diagram shows how organic matter becomes plant-available food.</p>
+        <p class="caption" style="margin-top: 0.5rem;">Infographic · Yonder Garden Works</p>
+      </div>
+      <div class="infographic-visual">
+        <!-- simple hand-drawn style SVG infographic -->
+        <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" aria-label="Simplified soil food web diagram">
+          <rect width="400" height="200" fill="#f6f3ee" rx="12"/>
+          <!-- soil layers -->
+          <rect x="20" y="120" width="360" height="60" fill="#d9c7b0" rx="4"/>
+          <rect x="20" y="100" width="360" height="20" fill="#b8a28b" rx="2"/>
+          <!-- roots -->
+          <path d="M200 100 Q180 130 160 140 M200 100 Q220 130 240 140 M200 100 Q200 140 200 150" stroke="#5c6e4f" stroke-width="2" fill="none"/>
+          <!-- microbes -->
+          <circle cx="80" cy="130" r="6" fill="#8a9a7e"/>
+          <circle cx="120" cy="150" r="4" fill="#b86b4b"/>
+          <circle cx="300" cy="140" r="5" fill="#c9a56b"/>
+          <circle cx="340" cy="155" r="3" fill="#5c6e4f"/>
+          <circle cx="250" cy="160" r="7" fill="#8a9a7e"/>
+          <!-- labels -->
+          <text x="30" y="40" font-family="Inter" font-size="9" fill="#3a3a35">Organic matter</text>
+          <text x="30" y="80" font-family="Inter" font-size="9" fill="#3a3a35">Bacteria &amp; fungi</text>
+          <text x="30" y="170" font-family="Inter" font-size="9" fill="#3a3a35">Nematodes &amp; microarthropods</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 5. SECTION: DEEP DIVES (more cards, varied layout) -->
+    <div class="section-header">
+      <h2><i class="fas fa-leaf"></i> Deep dives</h2>
+      <a href="#" class="section-link">Browse all guides →</a>
+    </div>
+
+    <div class="index-grid">
+      <article class="specimen-card reveal">
+        <div class="meta">Design · 22 min read</div>
+        <h3><a href="#">The layered garden: designing for four seasons of interest</a></h3>
+        <p>Structure, texture, and succession — a practical framework for a garden that never looks bare.</p>
+        <div class="specimen-footer"><span>Advanced</span><span>Aug 2025</span></div>
+      </article>
+      <article class="specimen-card reveal">
+        <div class="meta">Pests · 11 min read</div>
+        <h3><a href="#">Aphids, slugs, and beetles: integrated pest management that works</a></h3>
+        <p>No poisons, no panic. Build a garden that balances itself with habitat and observation.</p>
+        <div class="specimen-footer"><span>Intermediate</span><span>Jul 2025</span></div>
+      </article>
+      <article class="specimen-card reveal">
+        <div class="meta">Seeds · 16 min read</div>
+        <h3><a href="#">Seed saving for the home gardener: a practical guide</a></h3>
+        <p>Which crops to save, how to prevent cross-pollination, and the right way to store seeds.</p>
+        <div class="specimen-footer"><span>All levels</span><span>Jun 2025</span></div>
+      </article>
+      <article class="specimen-card reveal">
+        <div class="meta">Water · 8 min read</div>
+        <h3><a href="#">Ollas, drip, and soaker hoses: water wisdom for dry spells</a></h3>
+        <p>Low-tech and high-efficiency irrigation methods that keep plants thriving with less water.</p>
+        <div class="specimen-footer"><span>Technique</span><span>May 2025</span></div>
+      </article>
+    </div>
+
+    <!-- 6. RELATED / AUTHOR NOTE (human touch) -->
+    <div style="display: flex; gap: 2rem; margin-top: 4rem; border-top: 1px solid var(--border-light); padding-top: 2rem; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 240px;">
+        <div class="caption" style="color: var(--accent-clay);">From the editor</div>
+        <p style="font-family: 'Fraunces', serif; font-size: 1.3rem; line-height: 1.5; color: #2b3a2b; margin-top: 0.5rem;">
+          “A garden is never finished — it is a conversation with place, weather, and time.”
+        </p>
+        <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-muted);">— M. Ellery, editor</p>
+      </div>
+      <div style="flex: 1; min-width: 240px; display: flex; gap: 1.5rem; align-items: center;">
+        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=120&h=120&fit=crop&q=80" 
+             alt="Portrait of editor M. Ellery" 
+             style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover;"
+             loading="lazy">
+        <div>
+          <p style="font-weight: 600; margin-bottom: 0.25rem;">M. Ellery</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Editor &amp; field gardener. Writing from a smallholding in the Pacific Northwest.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo" style="color: #f6f3ee;">
+            <span class="logo-mark" aria-hidden="true"></span>
+            <span class="logo-text">
+              <span>Yonder</span>
+              <span style="color: #a8a89e;">Garden Works</span>
+            </span>
+          </a>
+          <p>A reader-supported journal for gardeners who want to grow with intention. 
+            No ads, no fluff — just deep knowledge rooted in observation.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="#">Soil &amp; Compost</a></li>
+            <li><a href="#">Seed Starting</a></li>
+            <li><a href="#">Perennials</a></li>
+            <li><a href="#">Water Wisdom</a></li>
+            <li><a href="#">Pest Balance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Publication</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Editorial policy</a></li>
+            <li><a href="#">Authors</a></li>
+            <li><a href="#">Archive</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Field notes</h4>
+          <p>Monthly-ish letters with practical tips and seasonal reminders.</p>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="Your email" aria-label="Email address" required>
+            <button type="submit">Join</button>
+          </form>
+          <p style="font-size: 0.7rem; margin-top: 0.75rem; color: #7a7a70;">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Yonder Garden Works. All rights reserved. Built with care.</div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+          <a href="#">Disclaimer</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- minimal script for reveal and mobile menu (just for demo) -->
+  <script>
+    // Intersection Observer for reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+
+    // simple mobile menu placeholder (no actual menu, but keeps interaction)
+    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
+      alert('Mobile navigation panel would open here — designed with a slide-in field index. (Demo)');
+    });
+
+    // search toggle demo
+    document.querySelector('.search-toggle')?.addEventListener('click', () => {
+      alert('Search overlay — type to explore 47+ guides. (Demo)');
+    });
+  </script>
+</body>
+</html>
